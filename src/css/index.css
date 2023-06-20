@@ -1,0 +1,151 @@
+:root { 
+  --bg: #364349; 
+  --white: #fffffe; 
+  --border: #eff0f6; 
+  --card__background: #1f3540; 
+  --grey: #a8bec9; 
+  --yellow: #ffd803; 
+  --blue-dark: #0e172c; 
+  --purple-ligth: #b69eff; 
+  --h1: 700 3.125rem/normal Inter; 
+  --h2: 700 2rem/2rem Inter; 
+  --body1-regular: 400 1.125rem/1.75rem Inter; 
+  --body1-bold: 700 1.125rem/normal Inter;   
+}
+
+body {
+  font: var(--body1-regular);
+  background: var(--bg);
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  color: var(--purple-ligth);
+  font: var(--h1);
+}
+
+h2{
+  color: var(--bg);
+  font: var(--h2);
+}
+
+p{
+  color: var(--grey);
+  font: var(--body1-bold);
+  margin: 5px 0;
+}
+
+.main-title {
+  color: var(--white);
+  text-align: center;
+}
+
+.board {
+  max-width: 360px;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.board .square {
+  width: 100px;
+  height: 100px;
+  background-color: var(--card__background);
+  border: 0;
+  border-bottom: 8px solid var(--blue-dark);
+  border-radius: 20px;
+}
+
+.square .icon {
+  width: 50px;
+  height: 50px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  margin-top: 50px;
+  background: var(--blue-dark);
+  gap: 30px
+}
+
+.reset-button {
+  border: 0;
+  background: var(--grey);
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  justify-self: end;
+}
+
+.turn {
+  width: 150px;
+  height: 70px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.turn p {
+  color: #000;
+}
+
+.turn__yellow {
+  background: var(--yellow);
+}
+
+.turn__purple {
+  background: var(--purple-ligth);
+}
+
+.turn-label {
+  font: var(--body1-regular);
+}
+
+.footer__text {
+  color: var(--white);
+}
+
+.next-box {
+  text-align: center;
+  margin: 10px;
+}
+
+.next-button {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font: var(--body1-bold);
+  border: 0;
+}
+
+.made-by {
+  color: var(--blue-dark);
+  font: var(--body1-bold);
+  text-align: center;
+}
+
+.made-by a {
+  color: var(--blue-dark);
+}
+
+
+@media screen and (max-width: 700px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .reset-box {
+    width: 100%;
+    text-align: center;
+  }
+}
